@@ -9,12 +9,35 @@
     android:gravity="center"
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
-    android:paddingTop="16dp"
-    android:paddingBottom="16dp"
+    android:paddingTop="15dp"
     tools:context=".MainActivity">
 
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewnew"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="4dp"
+        >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="0dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="MAD_ALARM_PRACTICAL"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:padding="5dp"></TextView>
 
 
+    </LinearLayout>
+    </androidx.cardview.widget.CardView>
 
     <!-- CardView -->
     <androidx.cardview.widget.CardView
@@ -22,7 +45,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardCornerRadius="10dp"
-        app:cardElevation="4dp">
+        app:cardElevation="4dp"
+        android:layout_marginTop="15dp">
 
         <!-- This is the content inside the CardView -->
         <LinearLayout
@@ -34,61 +58,117 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:background="@drawable/clockimage1"
-                android:layout_height="200dp"/>
+                android:layout_height="170dp"/>
+
 
             <!-- Half of the CardView for text -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:text="Create Alarm"
                 android:textStyle="bold"
                 android:textSize="18sp"
-                android:padding="16dp"/>
+                android:padding="8dp"/>
 
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:padding="2dp"
                 android:text="By pressing button, Alarm can be create and cancelled"
-                android:textSize="18sp"
-                android:padding="16dp"/>
+                android:textSize="18dp"
+                />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:text="Check current time by looking below real digital clock"
-                android:textSize="18sp"
-                android:padding="16dp"/>
+                android:textSize="18dp"
+                android:padding="2dp"/>
 
             <TextView
                 android:id="@+id/showdate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:text="11:45:17 PM Aug,14, 2022"
                 android:textStyle="bold"
                 android:layout_gravity="center"
                 android:textAlignment="center"
                 android:textSize="18sp"
-                android:padding="16dp"/>
+                android:padding="5dp"/>
 
 
 
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
+            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
                 android:id="@+id/fabalarmbutton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom|start"
                 android:backgroundTint="#9AEC72"
-                android:layout_margin="16dp"
-                app:srcCompat="@drawable/baseline_alarm_24"/>
+                android:layout_margin="5dp"
+                app:icon="@drawable/baseline_alarm_24"
+                android:text="Create Alarm"
+                android:textSize="17dp"
+
+                />
 
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewnew1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="4dp"
+        android:layout_marginTop="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:background="@drawable/image1"
+                android:layout_height="120dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Set Alarm Time:"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:padding="5dp"
+                ></TextView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="11:47 00 PM"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                ></TextView>
+            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                android:id="@+id/fabalarmbutton1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|start"
+                android:backgroundTint="#9AEC72"
+                android:layout_margin="16dp"
+                app:icon="@drawable/baseline_alarm_off_24"
+                android:text="Create Alarm"
+                android:textSize="17dp"
+
+                />
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
 
 
 </LinearLayout>

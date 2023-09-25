@@ -1,6 +1,9 @@
 package com.example.mad_pract8_21012021005
 
+import android.app.AlarmManager
 import android.app.DatePickerDialog
+import android.app.PendingIntent
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -24,6 +27,16 @@ class MainActivity : AppCompatActivity() {
             fab.setOnClickListener {
                 showDatePickerDialog(textView)
             }
+        }
+    }
+    fun setalarm(militime:Long,action: String){
+        val intentalarm=Intent(applicationContext,AlaramBroadcastReciever::class.java)
+        intentalarm.putExtra(AlaramBroadcastReciever.ALARMKEY)
+        val pendingIntent=PendingIntent.getBroadcast(applicationContext,2345,intentalarm,PendingIntent.FLAG_UPDATE_CURRENT)
+        val manager=getSystemService(ALARM_SERVICE)as AlarmManager
+
+        if(action==AlaramBroadcastReciever.ALARM_START){
+            manager.setExact(AlarmManager.RTC_WAKEUP,militime,pendingIntent)
         }
     }
 
