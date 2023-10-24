@@ -46,7 +46,8 @@
         android:layout_height="wrap_content"
         app:cardCornerRadius="10dp"
         app:cardElevation="4dp"
-        android:layout_marginTop="15dp">
+        android:layout_marginTop="15dp"
+        >
 
         <!-- This is the content inside the CardView -->
         <LinearLayout
@@ -86,21 +87,20 @@
                 android:textSize="18dp"
                 android:padding="2dp"/>
 
-            <TextView
-                android:id="@+id/showdate"
-                android:layout_width="match_parent"
+            <TextClock
+                android:id="@+id/text_clock"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="11:45:17 PM Aug,14, 2022"
-                android:textStyle="bold"
                 android:layout_gravity="center"
-                android:textAlignment="center"
-                android:textSize="18sp"
-                android:padding="5dp"/>
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:textSize="15sp"
+                />
 
 
 
             <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-                android:id="@+id/fabalarmbutton"
+                android:id="@+id/add_alaram"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom|start"
@@ -113,15 +113,18 @@
                 />
 
 
+
         </LinearLayout>
     </androidx.cardview.widget.CardView>
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardViewnew1"
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/remove_alram_card"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardCornerRadius="10dp"
         app:cardElevation="4dp"
-        android:layout_marginTop="10dp">
+        android:layout_marginTop="10dp"
+
+        >
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -145,29 +148,31 @@
                 android:padding="5dp"
                 ></TextView>
             <TextView
-                android:layout_width="match_parent"
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="11:47 00 PM"
-                android:textStyle="bold"
-                android:layout_gravity="center"
-                android:textAlignment="center"
-                ></TextView>
+                android:layout_marginStart="185dp"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:text="Time"
+                android:textSize="15sp"
+                android:textStyle="bold" />
             <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-                android:id="@+id/fabalarmbutton1"
+                android:id="@+id/remove_alaram"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom|start"
                 android:backgroundTint="#9AEC72"
                 android:layout_margin="16dp"
                 app:icon="@drawable/baseline_alarm_off_24"
-                android:text="Create Alarm"
+                android:text="Cancel Alarm"
                 android:textSize="17dp"
 
                 />
 
 
         </LinearLayout>
-    </androidx.cardview.widget.CardView>
+    </com.google.android.material.card.MaterialCardView>
 
 
 
